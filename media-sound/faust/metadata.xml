@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Sebastian Murschall</name>
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Primary maintainer</description>
+  </maintainer>
+
+  <longdescription>
+    Faust (Functional Audio Stream) is a functional programming language for sound synthesis and audio processing with a strong focus on the design of synthesizers, musical instruments, audio effects, etc. created at the GRAME-CNCM Research Department.
+  </longdescription>
+  <use>
+    <flag name="light">Install a light set of backends (C, CPP++, WASM)</flag>
+    <flag name="most">Install most of the backends(C, C++, Codebox, Cmajor, C#, Dlang, Java, Jax, Julia, JSFX, Rust, VHLD, WASM)</flag>
+    <flag name="all">Install all backends</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">grame-cncm/faust</remote-id>
+    <changelog>https://github.com/grame-cncm/faust/releases/tag/2.72.14</changelog>
+    <doc>https://faust.grame.fr/</doc>
+  </upstream>
+</pkgmetadata>
