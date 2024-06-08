@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Sebastian Murschall</name>
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Primary maintainer</description>
+  </maintainer>
+
+  <longdescription>
+   <pkg>FaustLive</pkg> is an advanced self-contained prototyping environment for the <pkg>Faust</pkg> programming language with an ultra-short edit-compile-run cycle. Thanks to its fully embedded compilation chain, FaustLive is simple to install and doesn't require any external compiler, development toolchain or SDK to run.
+
+FaustLive is the ideal tool for fast prototyping. <pkg>Faust</pkg> programs can be compiled and run on the fly by simple drag and drop. They can even be edited and recompiled while running, without sound interruption. It supports also native applications generation using the Faust online compiler.
+
+FaustLive is based on the <pkg>Faust</pkg> library and on <pkg>LLVM</pkg>.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">grame-cncm/faust</remote-id>
+    <changelog>https://github.com/grame-cncm/faustlive/releases/tag/2.5.18</changelog>
+    <doc>https://github.com/grame-cncm/faustlive?tab=readme-ov-file#readme</doc>
+  </upstream>
+</pkgmetadata>

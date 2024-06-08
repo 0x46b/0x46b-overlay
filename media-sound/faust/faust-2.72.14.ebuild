@@ -5,29 +5,38 @@ DESCRIPTION="A functional programming language for real-time signal processing a
 HOMEPAGE="https://faustdoc.grame.fr/"
 SRC_URI="https://github.com/grame-cncm/faust/releases/download/${PV}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 
 SLOT="0"
 
 KEYWORDS="~amd64"
-IUSE="+light most all"
-REQUIRED_USE="?? ( light most all )"
+IUSE="most libsall sound2faust"
 
-RDEPEND="media-libs/libsndfile"
+RDEPEND="
+sound2faust? ( media-libs/libsndfile )
+net-libs/libmicrohttpd"
+
 DEPEND="${RDEPEND}"
-BDEPEND="dev-build/cmake"
+
+BDEPEND="dev-build/cmake
+most? ( sys-devel/llvm )
+sound2faust? ( media-libs/libsndfile )
+net-libs/libmicrohttpd"
 
 src_compile() {
-	if use light; then
-		emake BACKENDS=light.cmake
+
+	if use libsall; then
+		emake libsall
 	fi
 
 	if use most; then
-		emake BACKENDS=most.cmake
+		emake most
+	else
+		emake compiler
 	fi
 
-	if use all; then
-		emake BACKENDS=all.cmake
+	if use sound2faust; then
+		emake sound2faust
 	fi
 }
 

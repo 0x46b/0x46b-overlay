@@ -11,9 +11,9 @@
     Faust (Functional Audio Stream) is a functional programming language for sound synthesis and audio processing with a strong focus on the design of synthesizers, musical instruments, audio effects, etc. created at the GRAME-CNCM Research Department.
   </longdescription>
   <use>
-    <flag name="light">Install a light set of backends (C, CPP++, WASM)</flag>
-    <flag name="most">Install most of the backends(C, C++, Codebox, Cmajor, C#, Dlang, Java, Jax, Julia, JSFX, Rust, VHLD, WASM)</flag>
-    <flag name="all">Install all backends</flag>
+    <flag name="most">Builds the Faust compiler with LLVM backend and every static libraries</flag>
+    <flag name="libsall">Builds the Faust compiler (without the LLVM backend) and includes all the static and dynamic libraries</flag>
+    <flag name="sound2faust">Builds the sound2faust utilities </flag>
   </use>
   <upstream>
     <remote-id type="github">grame-cncm/faust</remote-id>
