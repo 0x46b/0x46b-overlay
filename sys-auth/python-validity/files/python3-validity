@@ -1,4 +1,0 @@
-#!/sbin/openrc-run
-command="/usr/lib/python-validity/dbus-service"
-command_background=true
-pidfile="/var/run/${RC_SVCNAME}.pid"
