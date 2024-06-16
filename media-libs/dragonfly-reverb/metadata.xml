@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Sebastian Murschall</description>
+  </maintainer>
+  <longdescription>
+    Dragonfly Reverb is a bundle of free audio effects for Linux, MacOS, and Windows.
+  </longdescription>
+  <use>
+    <flag name="system-freeverb3">Uses system <pkg>media-libs/freeverb3</pkg> instead of bundled one.</flag>
+    <flag name="clap">Enables CLAP plugins.</flag>
+    <flag name="lv2">Enables lv2 plugins.</flag>
+    <flag name="vst3">Enables vst3 plugins.</flag>
+  </use>
+</pkgmetadata>
