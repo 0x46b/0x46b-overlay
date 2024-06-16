@@ -34,6 +34,10 @@ BDEPEND="
 src_prepare() {
 	default
 	sed -i '/^BASE_OPTS/s/-O3//' dpf/Makefile.base.mk || die
+	# Fix for issue #129 https://github.com/michaelwillis/dragonfly-reverb/issues/129
+	if use system-freeverb3; then
+		rm -fR common/freeverb
+	fi
 }
 
 src_compile() {

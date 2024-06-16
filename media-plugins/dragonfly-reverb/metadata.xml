@@ -12,8 +12,10 @@
     <flag name="lv2">Enables lv2 plugins.</flag>
     <flag name="vst2">Enables vst2 plugins.</flag>
     <flag name="vst3">Enables vst3 plugins.</flag>
+    <flag name="jack">Enables jack standalone plugins.</flag>
   </use>
   <upstream>
     <remote-id type="github">michaelwillis/dragonfly-reverb</remote-id>
+    <doc>https://michaelwillis.github.io/dragonfly-reverb/manuals.html</doc>
   </upstream>
 </pkgmetadata>
