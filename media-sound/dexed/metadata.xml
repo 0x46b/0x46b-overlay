@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Sebastian Murschall</name>
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Primary maintainer</description>
+  </maintainer>
+
+  <longdescription>
+Dexed is a multi platform, multi format plugin synth that is closely modeled on the Yamaha DX7. Dexed is also a midi cartridge librarian/manager for the DX7.
+  </longdescription>
+  <use>
+    <flag name="vst3">Install VST3 plugin</flag>
+    <flag name="clap">Install the CLAP plugin</flag>
+    <flag name="standalone">Install the standalone version</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">asb2m10/dexed</remote-id>
+    <changelog>https://github.com/asb2m10/dexed/releases/tag/v0.9.6</changelog>
+    <doc>https://asb2m10.github.io/dexed/</doc>
+  </upstream>
+</pkgmetadata>
