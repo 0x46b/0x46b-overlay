@@ -25,8 +25,9 @@ x11-libs/libXcursor
 x11-libs/libXrandr"
 
 src_install(){
-	cd {BUILD_DIR}/Source/Dexed_artefacts/RelWithDebInfo/
-	dolib.a libDexed_SharedCode.a
+	cd ${BUILD_DIR}/Source/Dexed_artefacts/RelWithDebInfo/
+
+	#dolib.a libDexed_SharedCode.a
 
 	if use vst3; then
 		insinto /usr/$(get_libdir)/vst3
