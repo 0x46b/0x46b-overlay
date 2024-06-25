@@ -10,8 +10,7 @@ EGIT_REPO_URI="https://github.com/asb2m10/dexed"
 EDIT_COMMIT="v{PV}"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
-IUSE="clap standalone +vst3"
+IUSE="clap +standalone vst3 +alsa doc"
 
 DEPEND="${RDEPEND}"
 
@@ -24,10 +23,25 @@ virtual/jack
 x11-libs/libXcursor
 x11-libs/libXrandr"
 
-src_install(){
-	cd ${BUILD_DIR}/Source/Dexed_artefacts/RelWithDebInfo/
+src_prepare() {
+	cmake_src_prepare
+}
 
-	#dolib.a libDexed_SharedCode.a
+src_configure(){
+	local mycmakeargs=(
+		-DDEXED_SKIP_VST3=$(usex vst3 FALSE TRUE)
+		-DDEXED_NO_ALSA=$(usex alsa FALSE TRUE)
+		-DJUCE_COPY_PLUGIN_AFTER_BUILD=TRUE
+	)
+	cmake_src_configure
+}
+
+src_install(){
+	if use doc; then
+		dodoc Documentation/*
+	fi
+
+	cd "${BUILD_DIR}/Source/Dexed_artefacts/RelWithDebInfo/"
 
 	if use vst3; then
 		insinto /usr/$(get_libdir)/vst3
