@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Sebastian Murschall</name>
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Primary maintainer</description>
+  </maintainer>
+
+  <longdescription>
+Dexed is a multi platform, multi format plugin synth that is closely modeled on the Yamaha DX7. Dexed is also a midi cartridge librarian/manager for the DX7.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">termux/termux-language-server</remote-id>
+    <remote-id type="pypi">termux-language-server</remote-id>
+    <doc>https://github.com/termux/termux-language-server</doc>
+  </upstream>
+</pkgmetadata>
