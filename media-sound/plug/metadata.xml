@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Sebastian Murschall</name>
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Primary maintainer</description>
+  </maintainer>
+
+    <use>
+    <flag name="lto">Enable link time optimization</flag>
+  </use>
+
+
+  <upstream>
+    <remote-id type="github">offa/plug</remote-id>
+    <changelog>https://github.com/offa/plug/releases/tag/v1.4.5</changelog>
+    <doc>https://github.com/offa/plug</doc>
+  </upstream>
+</pkgmetadata>
