@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>sebastian.murschall@gmail.com</email>
+    <description>Sebastian Murschall</description>
+  </maintainer>
+  <longdescription>
+    A software synthesizer featuring many synthesis techniques, a great selection of filters, a flexible modulation engine, a smorgasbord of effects, and modern features like MPE, microtuning (with MTS-ESP support!), and comprehensive Open Sound Control (OSC) support.
+  </longdescription>
+  <use>
+    <flag name="clang">Build with clang</flag>
+    <flag name="lv2">Build lv2-plugin</flag>
+    <flag name="python">Build python-bindings</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">surge-synthesizer/surge</remote-id>
+    <doc>https://surge-synthesizer.github.io/manual-xt/</doc>
+    <changelog>https://github.com/surge-synthesizer/releases-xt/releases/download/1.3.2/ReleaseNotes.md</changelog>
+  </upstream>
+</pkgmetadata>
