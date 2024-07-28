@@ -25,20 +25,18 @@ x11-libs/xcb-util
 x11-apps/xrandr
 x11-libs/libXinerama
 media-libs/alsa-lib"
-CMAKE_BUILD_TYPE="Release"
-CMAKE_IN_SOURCE_BUILD="True"
 
 src_configure() {
-	cmake -B${BUILD_DIR} -DCMAKE_BUILD_TYPE=Release -DSURGE_BUILD_LV2=$(usex lv2 TRUE FALSE) -DSURGE_BUILD_PYTHON_BINDINGS=$(usex python TRUE FALSE) -DCMAKE_INSTALL_PREFIX=${ED}/usr
+	cmake -Bbuild -DCMAKE_BUILD_TYPE=Release -DSURGE_BUILD_LV2=$(usex lv2 TRUE FALSE) -DSURGE_BUILD_PYTHON_BINDINGS=$(usex python TRUE FALSE) -DCMAKE_INSTALL_PREFIX=${ED}/usr
 }
 
 src_compile(){
-	cmake --build ignore/sxt --config Release --parallel 8
+	cmake --build build --config Release --parallel 4
 	if use python; then
-		cmake --build ${BUILD_DIR} --parallel --target surgepy
+		cmake --build build --parallel --target surgepy
 	fi
 }
 
 cmake_src_install(){
-	cmake --install ${BUILD_DIR}
+	cmake --install build
 }
