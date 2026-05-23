@@ -17,7 +17,7 @@ DESCRIPTION="A free software percussion synthesizer"
 HOMEPAGE="https://geonkick.org/"
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+standalone +lv2"
+IUSE="standalone +lv2"
 
 DEPEND="
 	dev-libs/rapidjson
