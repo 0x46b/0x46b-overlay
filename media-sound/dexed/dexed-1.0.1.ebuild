@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 EAPI=8
 inherit git-r3
@@ -8,14 +8,16 @@ DESCRIPTION="A multi platform, multi format plugin synth closely modeled on the 
 HOMEPAGE="https://asb2m10.github.io/dexed/"
 EGIT_REPO_URI="https://github.com/asb2m10/dexed"
 EDIT_COMMIT="v{PV}"
+
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="clap +standalone vst3 +alsa doc"
+KEYWORDS="~amd64"
+IUSE="clap +standalone vst +alsa doc"
 
 DEPEND="${RDEPEND}"
 
 BDEPEND="x11-libs/libX11
-net-misc/curl[gnutls]
+net-misc/curl
 media-libs/freetype
 media-libs/alsa-lib
 x11-libs/libXinerama
@@ -29,7 +31,7 @@ src_prepare() {
 
 src_configure(){
 	local mycmakeargs=(
-		-DDEXED_SKIP_VST3=$(usex vst3 FALSE TRUE)
+		-DDEXED_SKIP_VST3=$(usex vst FALSE TRUE)
 		-DDEXED_NO_ALSA=$(usex alsa FALSE TRUE)
 		-DJUCE_COPY_PLUGIN_AFTER_BUILD=TRUE
 	)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://gentoo.org">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>sebastian.murschall@gmail.com</email>
+        <name>Sebastian Murschall</name>
+    </maintainer>
+    <use>
+        <flag name="clap">Build the CLAP plugin</flag>
+        <flag name="standalone">Do not build any plugins, just the standalone version</flag>
+        <flag name="vst">Build the VST-Plugin</flag>
+    </use>
+</pkgmetadata>
