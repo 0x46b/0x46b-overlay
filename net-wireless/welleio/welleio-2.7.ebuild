@@ -11,7 +11,7 @@ SRC_URI="https://github.com/AlbrechtL/welle.io/archive/refs/tags/v${PV}.tar.gz -
 
 S="${WORKDIR}/welle.io-${PV}/"
 
-LICENSE="GPL-2.0"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
